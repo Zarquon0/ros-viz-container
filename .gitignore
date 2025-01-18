@@ -1,0 +1,3 @@
+container_home/*
+!container_home/.bashrc
+!container_home/.vnc/xstartup
