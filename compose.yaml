@@ -1,0 +1,15 @@
+services:
+  ros_viz:
+    build:
+      context: .
+      args:
+        CONT_USER: "${USER}"
+        USER_UID: "${UID}"
+    image: ros_viz
+    container_name: viz_robox
+    volumes:
+      - ./container_home:/home/${USER} # Mount local container_home/ directory
+    ports:
+      - "127.0.0.1:5901:5901" # Expose VNC server to localhost
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
