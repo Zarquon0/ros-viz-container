@@ -6,7 +6,7 @@ Steps for setup:
 1.  Clone this repository and navigate to it
 2.  Ensure that both docker and docker-compose are up to date on your system
 3.  Run `source build_env.sh`. This just sets a couple of environment variables used in the build process. NOTE: will not work on Windows; these variables will need to set manually for windows users at the present.
-4.  Build the container with `docker-compose build`
+4.  Build the container with `docker-compose build`. If this fails on the `FROM` directive, try pulling the base ros image first with `docker pull ros:humble-ros-base-jammy`.
 5.  Run the container with `docker-compose up -d`. Then attach to the container with `docker attach viz_robox` (this is the container's name). NOTE: if you would like to open another terminal window for the container, run `docker exec -it viz_robox bash` in another window. Then source the startup file with `source /startup.sh` in the container.
 
 Steps for GUI application usage:
