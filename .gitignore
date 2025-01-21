@@ -3,3 +3,4 @@ container_home/*
 !container_home/.vnc/
 container_home/.vnc/*
 !container_home/.vnc/xstartup
+build_env.sh
